@@ -1,0 +1,288 @@
+
+
+:root {
+    --bg: #ffffff;
+    --text: #111;
+    --muted: #666;
+    --card: #f9f9f9;
+    --border: #ddd;
+    --primary: #ffc107;
+}
+
+.dark {
+    --bg: #1f2937;
+    --text: #eee;
+    --muted: #aaa;
+    --card: #2d3748;
+    --border: #444;
+    --primary: #ffcc00;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Tajawal', sans-serif;
+}
+
+.card {
+    background: transparent;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid var(--border);
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.patient-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.card-title h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-title p {
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin: 0.25rem 0 0;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-red {
+    background-color: #fecaca;
+    color: #b91c1c;
+}
+
+.dark .badge-red {
+    background-color: #7f1d1d;
+    color: #ffe4e6;
+}
+
+.badge-yellow {
+    background-color: #fef08a;
+    color: #92400e;
+}
+
+.dark .badge-yellow {
+    background-color: #78350f;
+    color: #fef9c3;
+}
+
+.badge-green {
+    background-color: #bbf7d0;
+    color: #065f46;
+}
+
+.dark .badge-green {
+    background-color: #14532d;
+    color: #d1fae5;
+}
+
+.card-content {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}
+
+.info-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+.info-line span {
+    font-weight: 600;
+    font-size: large;
+    color: var(--text);
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.icon-large {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--muted);
+}
+
+.info-block {
+    margin-top: 0.75rem;
+    color: var(--muted);
+}
+
+.patient-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.edit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #ffb300;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    background: var(--card);
+    border-radius: 1rem;
+}
+
+/* ---------- Filament‐style Pagination Overrides ---------- */
+
+/* Container */
+nav[aria-label="Pagination Navigation"] {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  margin: 1.5rem 0 !important;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Page buttons (<a> & <span> with inline-flex) */
+nav[aria-label="Pagination Navigation"] .relative.inline-flex {
+  padding: 0.5rem 0.75rem !important;
+  margin: 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 4px !important;
+  background: var(--bg-light) !important;
+  color: var(--text) !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+  text-decoration: none !important;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Hover on enabled links */
+nav[aria-label="Pagination Navigation"] a.relative.inline-flex:hover {
+  background: var(--primary) !important;
+  color: var(--bg-light) !important;
+  border-color: var(--primary) !important;
+}
+
+/* “Previous/Next” disabled state */
+nav[aria-label="Pagination Navigation"] span.cursor-default {
+  opacity: 0.6;
+  cursor: not-allowed !important;
+}
+
+/* Active page (via aria-current on parent <li> or wrapper) */
+nav[aria-label="Pagination Navigation"] [aria-current="page"] .relative.inline-flex {
+  background: var(--primary) !important;
+  color: var(--bg-light) !important;
+  border-color: var(--primary) !important;
+  cursor: default;
+}
+
+/* Dark mode tweaks */
+.dark nav[aria-label="Pagination Navigation"] .relative.inline-flex {
+  background: var(--bg-light) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+.dark nav[aria-label="Pagination Navigation"] a.relative.inline-flex:hover,
+.dark nav[aria-label="Pagination Navigation"] [aria-current="page"] .relative.inline-flex {
+  background: var(--primary) !important;
+  color: var(--bg-light) !important;
+  border-color: var(--primary) !important;
+}
+
+/* Responsive: compress buttons on very narrow screens */
+@media (max-width: 400px) {
+  nav[aria-label="Pagination Navigation"] .relative.inline-flex {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Hide the real header */
+  .fi-ta-content thead {
+    display: none !important;
+  }
+
+  /* Make each row a “card” */
+  .fi-ta-table tbody tr {
+    display: block !important;
+    margin-bottom: 1rem !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    background: var(--bg-light) !important;
+    overflow: hidden !important;
+  }
+
+  /* Flex each cell */
+  .fi-ta-table tbody tr > td {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.75rem 1rem !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    position: relative !important;
+  }
+  .fi-ta-table tbody tr > td:last-child {
+    border-bottom: none !important;
+  }
+
+  /* Inject header text from data-label */
+  .fi-ta-table tbody tr > td::before {
+    content: attr(data-label) !important;
+    font-weight: 600 !important;
+    color: var(--text-light) !important;
+    margin-right: 0.5rem !important;
+    white-space: nowrap !important;
+  }
+}
+

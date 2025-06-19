@@ -1,0 +1,45 @@
+.physical-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/physical-therapy-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.physical-card {
+    transition: transform 0.3s ease;
+}
+
+.physical-card:hover {
+    transform: translateY(-5px);
+}
+
+.physical-section {
+    scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+    .physical-header {
+        height: 50vh;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

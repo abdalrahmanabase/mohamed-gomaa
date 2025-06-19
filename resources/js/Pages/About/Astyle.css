@@ -1,0 +1,41 @@
+/* About page specific styles */
+.about-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-section {
+    scroll-margin-top: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-header {
+        height: 50vh;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

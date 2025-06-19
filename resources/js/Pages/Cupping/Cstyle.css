@@ -1,0 +1,41 @@
+/* Cupping page specific styles */
+.cupping-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cupping-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.cupping-card:hover {
+    transform: translateY(-5px);
+}
+
+.cupping-section {
+    scroll-margin-top: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cupping-header {
+        height: 50vh;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

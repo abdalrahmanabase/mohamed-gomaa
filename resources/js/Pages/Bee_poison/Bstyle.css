@@ -1,0 +1,41 @@
+/* Bee Poison page specific styles */
+.bee-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bee-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.bee-card:hover {
+    transform: translateY(-5px);
+}
+
+.bee-section {
+    scroll-margin-top: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bee-header {
+        height: 50vh;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
