@@ -34,10 +34,13 @@ class PatientResource extends Resource
                     Select::make('type')
                         ->label('نوع الجلسة')
                         ->options([
-                            'bee venom' => 'لسع النحل',
+                            'bee venom' => 'سم النحل',
                             'physical therapy' => 'علاج طبيعي',
                             'plasma' => 'بلازما',
                             'hijama' => 'حجامة',
+                            'fsd' => 'علاج بالأعشاب',
+                            'tag' => 'تجميل',
+                            'fat' => 'سمنه و نحافه',
                             'other' => 'أخرى',
                         ])
                         ->required(),

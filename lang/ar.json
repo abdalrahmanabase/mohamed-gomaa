@@ -413,5 +413,13 @@
     "payment_date"                  : "تاريخ الدفع",
     "save"                          : "حفظ",
     "cancel"                        : "إلغاء",
-    "site_name":"بيت العز"
+    "site_name":"بيت العز",
+    "bee venom" : "لسع النحل",
+    "physical therapy" : "علاج طبيعي",
+    "plasma" : "بلازما",
+    "hijama" : "حجامة",
+    "fsd" : "علاج بالأعشاب",
+    "tag" : "تجميل",
+    "fat" : "سمنه و نحافه",
+    "other" : "أخرى"
 }

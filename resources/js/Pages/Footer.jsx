@@ -41,6 +41,9 @@ const Footer = () => {
                                 <Link href="/Cupping">الحجامة</Link>
                             </li>
                             <li>
+                                <Link href="/services">فوطه ناريه</Link>
+                            </li>
+                            <li>
                                 <Link href="/Bee_poison">لسع النحل</Link>
                             </li>
                             <li>

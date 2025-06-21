@@ -22,5 +22,9 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('11111111'),
         ]
         );
+
+        $this->call([
+            ReviewSeeder::class,
+        ]);
     }
 }

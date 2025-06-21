@@ -35,6 +35,7 @@ class InfoCardResource extends Resource
                     'Plasma' => 'بلازما',
                     'Physical_therapy' => 'العلاج الطبيعي',
                     'Cupping' => 'حجامة',
+                    'services' => 'فوطه ناريه',
                     'Bee_poison' => 'مصل النحل',
                 ])
                 ->required(),

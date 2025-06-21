@@ -5,8 +5,15 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 @source '../**/*.jsx';
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Tajawal','Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+
+body{
+    margin: 0;
+  font-family: 'Tajawal', sans-serif;
 }

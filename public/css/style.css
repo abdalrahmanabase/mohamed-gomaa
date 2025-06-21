@@ -63,8 +63,8 @@ body {
 }
 
 .card-title p {
-    font-size: 0.875rem;
-    color: var(--muted);
+    font-size: large  ;
+    color: var(--text);
     margin: 0.25rem 0 0;
 }
 
@@ -142,6 +142,15 @@ body {
     color: var(--muted);
 }
 
+.info-block strong{
+    font-size: large;
+    color: var(--text);
+}
+
+.info-block p{
+    font-size: large;
+    color: var(--text);
+}
 .patient-card {
     display: flex;
     flex-direction: column;

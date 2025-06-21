@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\InfoCardController;
+use App\Http\Controllers\Api\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,7 @@ use App\Http\Controllers\Api\InfoCardController;
 
 
 // Info Cards API Routes
-Route::get('/info-cards/{location?}', [InfoCardController::class, 'index']); 
+Route::get('/info-cards/{location?}', [InfoCardController::class, 'index']);
+
+// Reviews API Routes
+Route::get('/reviews', [ReviewController::class, 'index']); 

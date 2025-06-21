@@ -24,7 +24,7 @@
                 <div class="card-header">
                     <div class="card-title">
                         <h3>{{ $patient->name }}</h3>
-                        <p>{{ $patient->type }}</p>
+                        <p>{{ __($patient->type) }}</p>
                     </div>
                     @if($patient->next_session_at)
                         <span class="badge {{ $badgeColor }}">

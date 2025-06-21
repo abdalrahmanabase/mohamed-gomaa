@@ -3,6 +3,7 @@ use App\Http\Controllers\InfoCardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Models\InfoCard;
+use App\Models\Review;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Storage;
 
@@ -27,6 +28,26 @@ Route::get('/', function () {
         'infoCards' => $infoCards
     ]);
 });
+
+Route::get('/services', function () {
+    $infoCards = InfoCard::where('location', 'services')
+        ->orderBy('order')
+        ->get(['id', 'title', 'description', 'image_path', 'order'])
+        ->map(fn($card) => [
+            'id'          => $card->id,
+            'title'       => $card->title,
+            'description' => $card->description,
+            'image_path'  => $card->image_path
+                ? Storage::url($card->image_path)
+                : null,
+            'order'       => $card->order,
+        ]);
+
+    return Inertia::render('Services/Services', [
+        'infoCards' => $infoCards
+    ]);
+})->name('services');
+
 Route::get('/Physical_therapy', function () {
     $infoCards = InfoCard::where('location', 'Physical_therapy')
         ->orderBy('order')
@@ -122,6 +143,26 @@ Route::get('/about', function () {
         'infoCards' => $infoCards
     ]);
 })->name('about');
+
+// API Routes
+Route::get('/api/reviews', function () {
+    $reviews = Review::active()
+        ->ordered()
+        ->get(['id', 'name', 'position', 'content', 'image_path', 'rating', 'created_at'])
+        ->map(function ($review) {
+            return [
+                'id' => $review->id,
+                'name' => $review->name,
+                'position' => $review->position,
+                'content' => $review->content,
+                'image' => $review->image_path ? Storage::url($review->image_path) : null,
+                'rating' => $review->rating,
+                'created_at' => $review->created_at->format('Y-m-d')
+            ];
+        });
+
+    return response()->json($reviews);
+});
 
 Route::get('/cards/{location?}', [InfoCardController::class, 'index'])
     ->name('cards.index');

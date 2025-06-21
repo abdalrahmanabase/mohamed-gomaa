@@ -59,14 +59,14 @@
 }
 
 .logo img {
-    height: 40px;
+    height: 60px;
     margin-left: 0.5rem;
 }
 
 .logo span {
     font-size: 1.5rem;
     font-weight: bold;
-    color: black;
+    color: gold;
 }
 
 .nav-links {
@@ -80,7 +80,8 @@
 .nav-link {
     text-decoration: none;
     color: black;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: larger;
     transition: all 0.3s ease;
     padding: 0.5rem 0;
     position: relative;
@@ -389,7 +390,7 @@
 
 /* RTL Support */
 [dir="rtl"] .logo img {
-    margin-left: 0;
+    margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
 

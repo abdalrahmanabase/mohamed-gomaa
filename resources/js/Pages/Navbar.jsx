@@ -29,8 +29,8 @@ const Navbar = () => {
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
                 <Link href="/" className="logo">
-                    <img src="/images/logo.png" alt="Logo" />
-                    <span>المركز الطبي</span>
+                    <img src="/ChatGPT_Image_Jun_20__2025__10_00_27_PM-removebg-preview.png" alt="Logo" />
+                    <span>مركز ابن القيم للحجامة والطب البديل</span>
                 </Link>
 
                 <button className="mobile-menu-button" onClick={toggleMenu}>
@@ -44,8 +44,12 @@ const Navbar = () => {
                     <li>
                         <Link href="/about" className="nav-link">من نحن</Link>
                     </li>
+                    
                     <li>
                         <Link href="/Cupping" className="nav-link">الحجامة</Link>
+                    </li>
+                    <li>
+                        <Link href="/services" className="nav-link">فوطه ناريه</Link>
                     </li>
                     <li>
                         <Link href="/Bee_poison" className="nav-link">لسع النحل</Link>
