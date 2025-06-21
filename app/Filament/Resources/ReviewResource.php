@@ -100,7 +100,7 @@ class ReviewResource extends Resource
                 
                 Tables\Columns\TextColumn::make('content')
                     ->label('المحتوى')
-                    ->limit(50)
+                    ->limit(20)
                     ->searchable(),
                 
                 Tables\Columns\TextColumn::make('rating')

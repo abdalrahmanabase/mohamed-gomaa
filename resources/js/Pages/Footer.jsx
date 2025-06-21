@@ -35,7 +35,7 @@ const Footer = () => {
                                 <Link href="/">الرئيسية</Link>
                             </li>
                             <li>
-                                <Link href="/About">من نحن</Link>
+                                <Link href="/about">من نحن</Link>
                             </li>
                             <li>
                                 <Link href="/Cupping">الحجامة</Link>

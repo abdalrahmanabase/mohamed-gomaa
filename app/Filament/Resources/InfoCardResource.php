@@ -58,7 +58,6 @@ class InfoCardResource extends Resource
                 TextColumn::make('title')->label('العنوان')->searchable(),
                 TextColumn::make('description')->label('الوصف')->limit(50),
                 TextColumn::make('location')->label('مكان العرض')->badge(),
-                TextColumn::make('order')->label('الترتيب'),
             ])
             ->filters([
                 SelectFilter::make('location')
