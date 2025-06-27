@@ -4,12 +4,7 @@ import './Hstyle.css';
 
 const Hheader = () => {
     return (
-        <header className="home-header" style={{
-            background: 'linear-gradient(135deg, #1a237e 0%, #0d47a1 100%)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-        }}>
+        <header className="home-header" >
             <div className="header-overlay"></div>
             <div className="header-content">
                 <motion.h1
@@ -18,7 +13,7 @@ const Hheader = () => {
                     transition={{ duration: 0.8 }}
                     className="header-title"
                 >
-                    مرحباً بكم في شركتنا
+                    مرحباً بكم في مركزنا الطبي
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -26,7 +21,8 @@ const Hheader = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="header-subtitle"
                 >
-                    نقدم حلولاً مبتكرة لاحتياجات عملك
+تعريف الحجامة
+الحجامة هي ممارسة طبية قديمة تتضمن وضع كؤوس خاصة على الجلد لإنشاء شفط، مما يؤدي إلى سحب الدم إلى السطح. تهدف هذه العملية إلى تحفيز الدورة الدموية، تخفيف الألم، وإزالة السموم من الجسم. تُستخدم الحجامة في الطب التقليدي لعلاج مجموعة متنوعة من الحالات الصحية وتحسين الرفاهية العامة.
                 </motion.p>
             </div>
         </header>
