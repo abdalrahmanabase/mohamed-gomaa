@@ -11,7 +11,7 @@ const Bsection3 = () => {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">مميزات العلاج بلسع النحل</h2>
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">مميزات العلاج بسم النحل</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         نقدم علاجاً طبيعياً آمناً وفعالاً باستخدام سم النحل
                     </p>

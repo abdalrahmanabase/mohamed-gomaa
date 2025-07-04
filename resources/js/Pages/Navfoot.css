@@ -67,7 +67,7 @@
 .logo span {
     font-size: 1.5rem;
     font-weight: bold;
-    color: gold;
+    color: #0043ff;
 }
 
 .nav-links {
@@ -99,12 +99,12 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: gold;
+    background-color: #007bff;
     transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-    color: gold;
+    color: #007bff;
 }
 
 .nav-link:hover::after {
@@ -370,6 +370,9 @@
         display: block;
         text-align: center;
     }
+    .nav-link {
+    color: black;
+    }
 
     .nav-links.active li {
         padding: .2rem;
@@ -411,9 +414,9 @@
     transform: translateX(-5px);
 }
 
-[dir="rtl"] .working-hours li {
+/* [dir="rtl"] .working-hours li {
     flex-direction: row-reverse;
-}
+} */
 
 [dir="rtl"] .working-hours li:hover {
     transform: translateX(-5px);

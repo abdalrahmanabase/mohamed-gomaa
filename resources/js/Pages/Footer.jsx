@@ -13,16 +13,18 @@ const Footer = () => {
                         <h3 className="footer-title">تواصل معنا</h3>
                         <div className="contact-info">
                             <div className="contact-item">
-                                <i className="fas fa-phone"></i>
-                                <span>+966 12 345 6789</span>
+                                <a href="tel:+201013739037" className="flex items-center text-inherit">
+                                    <i className="fas fa-phone"></i>
+                                    <span>+20 101 373 9037</span>
+                                </a>
                             </div>
-                            <div className="contact-item">
+                            {/* <div className="contact-item">
                                 <i className="fas fa-envelope"></i>
                                 <span>info@medicalcenter.com</span>
-                            </div>
+                            </div> */}
                             <div className="contact-item">
                                 <i className="fas fa-map-marker-alt"></i>
-                                <span>الرياض، المملكة العربية السعودية</span>
+                                <span>الاسكندرية. جمهورية مصر العربية</span>
                             </div>
                         </div>
                     </div>
@@ -32,28 +34,35 @@ const Footer = () => {
                         <h3 className="footer-title">روابط سريعة</h3>
                         <ul className="footer-links">
                             <li>
-                                <Link href="/">الرئيسية</Link>
+                                <Link href="/" className="nav-link">الرئيسية</Link>
                             </li>
                             <li>
-                                <Link href="/about">من نحن</Link>
+                                <Link href="/about" className="nav-link">من نحن</Link>
                             </li>
                             <li>
-                                <Link href="/Cupping">الحجامة</Link>
+                                <Link href="/Cupping" className="nav-link">الحجامة</Link>
                             </li>
                             <li>
-                                <Link href="/services">فوطه ناريه</Link>
+                                <Link href="/services" className="nav-link">فوطه ناريه</Link>
                             </li>
                             <li>
-                                <Link href="/Bee_poison">لسع النحل</Link>
+                                <Link href="/Bee_poison" className="nav-link">سم النحل</Link>
                             </li>
                             <li>
-                                <Link href="/Physical_therapy">العلاج الطبيعي</Link>
+                                <Link href="/Physical_therapy" className="nav-link">العلاج الطبيعي</Link>
                             </li>
                             <li>
-                                <Link href="/Plasma">البلازما</Link>
+                                <Link href="/Plasma" className="nav-link">البلازما</Link>
                             </li>
                             <li>
-                                <Link href="/">حجز موعد</Link>
+                                <a
+                                    href="https://wa.me/201013739037"
+                                    className="nav-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    حجز زيارة منزلية
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -64,11 +73,14 @@ const Footer = () => {
                         <ul className="working-hours">
                             <li>
                                 <span>السبت - الخميس:</span>
-                                <span>9:00 صباحاً - 9:00 مساءً</span>
+                                <span>12:00 صباحاً - 10:00 مساءً</span>
                             </li>
                             <li>
                                 <span>الجمعة:</span>
-                                <span>10:00 صباحاً - 6:00 مساءً</span>
+                                <span>2:00 بعد الظهر - 8:00 مساءً</span>
+                            </li>
+                            <li>
+                                <span></span>
                             </li>
                         </ul>
                     </div>
@@ -79,13 +91,13 @@ const Footer = () => {
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                         <i className="fab fa-facebook"></i>
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Twitter">
+                    {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Twitter">
                         <i className="fab fa-twitter"></i>
-                    </a>
+                    </a> */}
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
                         <i className="fab fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/966123456789" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
+                    <a href="https://wa.me/201013739037" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
                         <i className="fab fa-whatsapp"></i>
                     </a>
                 </div>

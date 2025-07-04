@@ -19,9 +19,9 @@ const Asection1 = ({ infoCards }) => {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">About Our Clinic</h2>
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">عن عيادتنا</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Discover our commitment to excellence in healthcare and our team of dedicated professionals.
+                        اكتشف التزامنا بالتميز في الرعاية الصحية وفريقنا من المحترفين المتفانين.
                     </p>
                 </motion.div>
 

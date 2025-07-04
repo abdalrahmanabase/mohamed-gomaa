@@ -11,7 +11,7 @@ const Bsection2 = () => {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">فوائد لسع النحل</h2>
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">فوائد لسم النحل</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         علاج طبيعي فعال يساعد في تحسين الصحة العامة وتخفيف العديد من الأمراض
                     </p>

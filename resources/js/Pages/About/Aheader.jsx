@@ -24,10 +24,9 @@ const Aheader = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="text-xl text-gray-200 mb-8"
+                        className="text-xl text-gray-200 mb-8 header-paragraph-limit"
                     >
-                        اكتشف التزامنا بالتميز في الرعاية الصحية وفريقنا من المتخصصين المتفانين
-                    </motion.p>
+فريق مركز ابن القيم بخبره اكثر من ١٥ عاما في مجالات العلاج بالطرق الطبيعيه                    </motion.p>
                 </div>
             </div>
         </motion.div>
