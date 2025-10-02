@@ -3,29 +3,29 @@ import { motion } from 'framer-motion';
 
 const Psection3 = () => {
     return (
-        <section className="py-16 bg-gray-50">
-            <div className="container mx-auto px-4">
+        <section className="features-section">
+            <div className="features-container">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-center mb-12"
+                    className="section-header"
                 >
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">مميزات العلاج الطبيعي</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <h2 className="section-title">مميزات العلاج الطبيعي</h2>
+                    <p className="section-description">
                         علاج طبيعي آمن وفعال باستخدام أحدث التقنيات والأساليب
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="features-grid">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="bg-white p-6 rounded-lg shadow-sm"
+                        className="feature-card"
                     >
-                        <h3 className="text-xl font-semibold text-gray-800 mb-4">علاج غير جراحي</h3>
-                        <p className="text-gray-600">
+                        <h3 className="feature-title">علاج غير جراحي</h3>
+                        <p className="feature-description">
                             حلول طبيعية بدون تدخل جراحي
                         </p>
                     </motion.div>
@@ -34,10 +34,10 @@ const Psection3 = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="bg-white p-6 rounded-lg shadow-sm"
+                        className="feature-card"
                     >
-                        <h3 className="text-xl font-semibold text-gray-800 mb-4">تأهيل متكامل</h3>
-                        <p className="text-gray-600">
+                        <h3 className="feature-title">تأهيل متكامل</h3>
+                        <p className="feature-description">
                             برامج تأهيل شاملة لجميع الحالات
                         </p>
                     </motion.div>
@@ -46,10 +46,10 @@ const Psection3 = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
-                        className="bg-white p-6 rounded-lg shadow-sm"
+                        className="feature-card"
                     >
-                        <h3 className="text-xl font-semibold text-gray-800 mb-4">أجهزة حديثة</h3>
-                        <p className="text-gray-600">
+                        <h3 className="feature-title">أجهزة حديثة</h3>
+                        <p className="feature-description">
                             استخدام أحدث الأجهزة والتقنيات
                         </p>
                     </motion.div>
@@ -58,14 +58,22 @@ const Psection3 = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.8 }}
-                        className="bg-white p-6 rounded-lg shadow-sm"
+                        className="feature-card"
                     >
-                        <h3 className="text-xl font-semibold text-gray-800 mb-4">خبراء متخصصون</h3>
-                        <p className="text-gray-600">
+                        <h3 className="feature-title">خبراء متخصصون</h3>
+                        <p className="feature-description">
                             فريق من المعالجين ذوي الخبرة العالية
                         </p>
                     </motion.div>
                 </div>
+                <div className="process-info">
+                        <p className="process-description">
+                            تستغرق الجلسة عادة من 30 إلى 45 دقيقة، وتتم تحت إشراف طبي متخصص
+                        </p>
+                        <a href="https://wa.me/201013739037" className="appointment-button">
+                            احجز موعدك الآن
+                        </a>
+                    </div>
             </div>
         </section>
     );

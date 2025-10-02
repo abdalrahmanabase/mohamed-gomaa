@@ -51,7 +51,7 @@ const Navbar = () => {
             <div className="navbar-container">
                 <Link href="/" className="logo">
                     <img src="/ChatGPT_Image_Jun_20__2025__10_00_27_PM-removebg-preview.png" alt="Logo" />
-                    <span>مركز ابن القيم للحجامة والطب البديل</span>
+                    <span>مركز ابن القيم</span>
                 </Link>
 
                 <button className="mobile-menu-button" onClick={toggleMenu}>
@@ -74,6 +74,12 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link href="/Bee_poison" className="nav-link">سم النحل</Link>
+                    </li>
+                    <li>
+                        <Link href="/mesotherapy" className="nav-link">الميزوثيرابي</Link>
+                    </li>
+                    <li>
+                        <Link href="/herbs-oils" className="nav-link">الأعشاب والزيوت</Link>
                     </li>
                     <li>
                         <Link href="/Physical_therapy" className="nav-link">العلاج الطبيعي</Link>

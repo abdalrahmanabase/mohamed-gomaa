@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\InfoCardController;
+use App\Http\Controllers\Api\InfoCardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Models\InfoCard;
@@ -143,6 +143,44 @@ Route::get('/about', function () {
         'infoCards' => $infoCards
     ]);
 })->name('about');
+
+Route::get('/mesotherapy', function () {
+    $infoCards = InfoCard::where('location', 'Mesotherapy')
+        ->orderBy('order')
+        ->get(['id', 'title', 'description', 'image_path', 'order'])
+        ->map(fn($card) => [
+            'id'          => $card->id,
+            'title'       => $card->title,
+            'description' => $card->description,
+            'image_path'  => $card->image_path
+                ? Storage::url($card->image_path)
+                : null,
+            'order'       => $card->order,
+        ]);
+
+    return Inertia::render('Mesotherapy/Mesotherapy', [
+        'infoCards' => $infoCards
+    ]);
+})->name('mesotherapy');
+
+Route::get('/herbs-oils', function () {
+    $infoCards = InfoCard::where('location', 'HerbsOils')
+        ->orderBy('order')
+        ->get(['id', 'title', 'description', 'image_path', 'order'])
+        ->map(fn($card) => [
+            'id'          => $card->id,
+            'title'       => $card->title,
+            'description' => $card->description,
+            'image_path'  => $card->image_path
+                ? Storage::url($card->image_path)
+                : null,
+            'order'       => $card->order,
+        ]);
+
+    return Inertia::render('HerbsOils/HerbsOils', [
+        'infoCards' => $infoCards
+    ]);
+})->name('herbs-oils');
 
 // API Routes
 Route::get('/api/reviews', function () {

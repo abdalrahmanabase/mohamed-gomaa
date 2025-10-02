@@ -15,26 +15,16 @@ return [
             ],
 
             'save' => [
-                'label' => 'حفظ التغييرات',
+                'label' => 'حفظ',
             ],
 
         ],
 
     ],
 
-    'content' => [
+    'messages' => [
 
-        'tab' => [
-            'label' => 'تعديل',
-        ],
-
-    ],
-
-    'notifications' => [
-
-        'saved' => [
-            'title' => 'تم الحفظ',
-        ],
+        'saved' => 'تم الحفظ',
 
     ],
 

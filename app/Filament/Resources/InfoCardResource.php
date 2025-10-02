@@ -37,16 +37,21 @@ class InfoCardResource extends Resource
                     'Cupping' => 'حجامة',
                     'services' => 'فوطه ناريه',
                     'Bee_poison' => 'مصل النحل',
+                    'Mesotherapy' => 'الميزوثيرابي',
+                    'HerbsOils' => 'الأعشاب والزيوت',
                 ])
                 ->required(),
             FileUpload::make('image_path')
                 ->label('الصورة')
-                ->image()
+                ->acceptedFileTypes(['image/*'])
                 ->directory('info-cards')
                 ->preserveFilenames()
                 ->downloadable()
                 ->openable()
-                ->previewable(),
+                ->previewable()
+                ->rules([
+                    'mimetypes:image/jpeg,image/png,image/gif,image/webp,image/svg+xml,image/bmp,image/tiff,image/x-icon'
+                ]),
         ]);
     }
 
@@ -57,7 +62,23 @@ class InfoCardResource extends Resource
                 ImageColumn::make('image_path')->label('الصورة')->square(),
                 TextColumn::make('title')->label('العنوان')->searchable(),
                 TextColumn::make('description')->label('الوصف')->limit(50),
-                TextColumn::make('location')->label('مكان العرض')->badge(),
+                TextColumn::make('location')
+                    ->label('مكان العرض')
+                    ->badge()
+                    ->formatStateUsing(function ($state) {
+                        $labels = [
+                            'home' => 'الصفحة الرئيسية',
+                            'about' => 'من نحن',
+                            'Plasma' => 'بلازما',
+                            'Physical_therapy' => 'العلاج الطبيعي',
+                            'Cupping' => 'حجامة',
+                            'services' => 'فوطه ناريه',
+                            'Bee_poison' => 'مصل النحل',
+                            'Mesotherapy' => 'الميزوثيرابي',
+                            'HerbsOils' => 'الأعشاب والزيوت',
+                        ];
+                        return $labels[$state] ?? $state;
+                    }),
             ])
             ->filters([
                 SelectFilter::make('location')
@@ -68,7 +89,10 @@ class InfoCardResource extends Resource
                         'Plasma' => 'بلازما',
                         'Physical_therapy' => 'العلاج الطبيعي',
                         'Cupping' => 'حجامة',
+                        'services' => 'فوطه ناريه',
                         'Bee_poison' => 'مصل النحل',
+                        'Mesotherapy' => 'الميزوثيرابي',
+                        'HerbsOils' => 'الأعشاب والزيوت',
                     ])
                     ->indicateUsing(function ($state) {
                         $labels = [
@@ -77,7 +101,10 @@ class InfoCardResource extends Resource
                             'Plasma' => 'بلازما',
                             'Physical_therapy' => 'العلاج الطبيعي',
                             'Cupping' => 'حجامة',
+                            'services' => 'فوطه ناريه',
                             'Bee_poison' => 'مصل النحل',
+                            'Mesotherapy' => 'الميزوثيرابي',
+                            'HerbsOils' => 'الأعشاب والزيوت',
                         ];
                         return is_array($state)
                             ? 'مكان العرض: ' . collect($state)->map(fn($v) => $labels[$v] ?? $v)->implode(', ')
@@ -87,7 +114,24 @@ class InfoCardResource extends Resource
             ->reorderable('order')
             ->defaultSort('location')
             ->defaultGroup('location')
-            ->groups(['location']);
+            ->groups([
+                \Filament\Tables\Grouping\Group::make('location')
+                    ->label('مكان العرض')
+                    ->getTitleFromRecordUsing(function ($record) {
+                        $labels = [
+                            'home' => 'الصفحة الرئيسية',
+                            'about' => 'من نحن',
+                            'Plasma' => 'بلازما',
+                            'Physical_therapy' => 'العلاج الطبيعي',
+                            'Cupping' => 'حجامة',
+                            'services' => 'فوطه ناريه',
+                            'Bee_poison' => 'مصل النحل',
+                            'Mesotherapy' => 'الميزوثيرابي',
+                            'HerbsOils' => 'الأعشاب والزيوت',
+                        ];
+                        return $labels[$record->location] ?? $record->location;
+                    }),
+            ]);
     }
 
     public static function getPages(): array
@@ -109,7 +153,10 @@ class InfoCardResource extends Resource
                     WHEN location = 'Plasma' THEN 3
                     WHEN location = 'Physical_therapy' THEN 4
                     WHEN location = 'Cupping' THEN 5
-                    WHEN location = 'Bee_poison' THEN 6
+                    WHEN location = 'services' THEN 6
+                    WHEN location = 'Bee_poison' THEN 7
+                    WHEN location = 'Mesotherapy' THEN 8
+                    WHEN location = 'HerbsOils' THEN 9
                     ELSE 99
                 END
             ")

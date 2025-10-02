@@ -2,14 +2,16 @@
 
 return [
 
-    'title' => 'عرض :label',
-
     'breadcrumb' => 'عرض',
 
-    'content' => [
+    'form' => [
 
-        'tab' => [
-            'label' => 'عرض',
+        'actions' => [
+
+            'edit' => [
+                'label' => 'تعديل',
+            ],
+
         ],
 
     ],

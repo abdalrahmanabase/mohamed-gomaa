@@ -38,6 +38,7 @@ class PatientResource extends Resource
                             'physical therapy' => 'علاج طبيعي',
                             'plasma' => 'بلازما',
                             'hijama' => 'حجامة',
+                            'mesotherapy' => 'الميزوثيرابي',
                             'fsd' => 'علاج بالأعشاب',
                             'tag' => 'تجميل',
                             'fat' => 'سمنه و نحافه',
@@ -69,7 +70,21 @@ class PatientResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')->label('الاسم')->searchable(),
                 Tables\Columns\TextColumn::make('phone')->label('رقم الهاتف'),
-                Tables\Columns\TextColumn::make('type')->label('نوع الجلسة')->badge(),
+                Tables\Columns\TextColumn::make('type')
+                    ->label('نوع الجلسة')
+                    ->badge()
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'bee venom' => 'سم النحل',
+                        'physical therapy' => 'علاج طبيعي',
+                        'plasma' => 'بلازما',
+                        'hijama' => 'حجامة',
+                        'mesotherapy' => 'الميزوثيرابي',
+                        'fsd' => 'علاج بالأعشاب',
+                        'tag' => 'تجميل',
+                        'fat' => 'سمنه و نحافه',
+                        'other' => 'أخرى',
+                        default => $state,
+                    }),
                 Tables\Columns\TextColumn::make('session_status')
                     ->label('حالة الجلسة')
                     ->badge()

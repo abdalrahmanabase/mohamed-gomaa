@@ -11,43 +11,42 @@ const Asection1 = ({ infoCards }) => {
     }
 
     return (
-        <section className="py-16 bg-gray-50">
-            <div className="container mx-auto px-4">
+        <section className="about-section">
+            <div className="about-container">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-center mb-12"
+                    className="section-header"
                 >
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">عن عيادتنا</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
-                        اكتشف التزامنا بالتميز في الرعاية الصحية وفريقنا من المحترفين المتفانين.
+                    <h2 className="section-title">عن عيادتنا</h2>
+                    <p className="section-description">
+                        اكتشف التزامنا بالتميز في الرعاية الصحية و اهتمامنا بعملائنا.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="cards-grid">
                     {infoCards.map((card, index) => (
                         <motion.div
                             key={card.id}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                            className="about-card"
                         >
-                            <div className="relative h-48">
+                            <div className="card-image">
                                 <img
                                     src={card.image_path}
                                     alt={card.title}
-                                    className="w-full h-full object-cover"
                                     onError={(e) => {
                                         e.target.onerror = null;
                                         e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(card.title)}&background=random`;
                                     }}
                                 />
                             </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">{card.title}</h3>
-                                <p className="text-gray-600">{card.description}</p>
+                            <div className="card-content">
+                                <h3 className="card-title">{card.title}</h3>
+                                <p className="card-description">{card.description}</p>
                             </div>
                         </motion.div>
                     ))}

@@ -5,9 +5,9 @@ import './Navfoot.css';
 
 const Layout = ({ children }) => {
     return (
-        <div className="min-h-screen flex flex-col" dir="rtl">
+        <div className="layout" dir="rtl">
             <Navbar />
-            <main className="flex-grow">
+            <main className="main-content">
                 {children}
             </main>
             <Footer />

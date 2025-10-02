@@ -13,7 +13,7 @@ const Footer = () => {
                         <h3 className="footer-title">تواصل معنا</h3>
                         <div className="contact-info">
                             <div className="contact-item">
-                                <a href="tel:+201013739037" className="flex items-center text-inherit">
+                                <a href="tel:+201013739037" className="contact-link">
                                     <i className="fas fa-phone"></i>
                                     <span>+20 101 373 9037</span>
                                 </a>
@@ -47,6 +47,12 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link href="/Bee_poison" className="nav-link">سم النحل</Link>
+                            </li>
+                            <li>
+                                <Link href="/mesotherapy" className="nav-link">الميزوثيرابي</Link>
+                            </li>
+                            <li>
+                                <Link href="/herbs-oils" className="nav-link">الأعشاب والزيوت</Link>
                             </li>
                             <li>
                                 <Link href="/Physical_therapy" className="nav-link">العلاج الطبيعي</Link>

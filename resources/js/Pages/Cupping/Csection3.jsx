@@ -3,29 +3,29 @@ import { motion } from 'framer-motion';
 
 const Csection3 = () => {
     return (
-        <section className="py-16 bg-gray-50">
-            <div className="container mx-auto px-4">
+        <section className="types-section">
+            <div className="types-container">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-center mb-12"
+                    className="section-header"
                 >
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">أنواع الحجامة</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <h2 className="section-title">أنواع الحجامة</h2>
+                    <p className="section-description">
                         نقدم أنواع مختلفة من الحجامة لتناسب احتياجات كل مريض
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="types-grid">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="bg-white p-6 rounded-lg shadow-md"
+                        className="type-card"
                     >
-                        <h3 className="text-xl font-semibold text-gray-800 mb-4">الحجامة الجافة</h3>
-                        <p className="text-gray-600">
+                        <h3 className="type-title">الحجامة الجافة</h3>
+                        <p className="type-description">
                             تستخدم لتحسين تدفق الدم وتنشيط الدورة الدموية
                         </p>
                     </motion.div>
@@ -34,10 +34,10 @@ const Csection3 = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="bg-white p-6 rounded-lg shadow-md"
+                        className="type-card"
                     >
-                        <h3 className="text-xl font-semibold text-gray-800 mb-4">الحجامة الرطبة</h3>
-                        <p className="text-gray-600">
+                        <h3 className="type-title">الحجامة الرطبة</h3>
+                        <p className="type-description">
                             تساعد في إزالة الدم الفاسد وتنقية الجسم
                         </p>
                     </motion.div>
@@ -46,10 +46,10 @@ const Csection3 = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
-                        className="bg-white p-6 rounded-lg shadow-md"
+                        className="type-card"
                     >
-                        <h3 className="text-xl font-semibold text-gray-800 mb-4">الحجامة المتزحلقة</h3>
-                        <p className="text-gray-600">
+                        <h3 className="type-title">الحجامة المتزحلقة</h3>
+                        <p className="type-description">
                             تستخدم لعلاج آلام العضلات والمفاصل
                         </p>
                     </motion.div>
@@ -58,14 +58,22 @@ const Csection3 = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.8 }}
-                        className="bg-white p-6 rounded-lg shadow-md"
+                        className="type-card"
                     >
-                        <h3 className="text-xl font-semibold text-gray-800 mb-4">الحجامة النارية</h3>
-                        <p className="text-gray-600">
+                        <h3 className="type-title">الحجامة النارية</h3>
+                        <p className="type-description">
                             تستخدم لعلاج بعض الأمراض المزمنة
                         </p>
                     </motion.div>
                 </div>
+                <div className="process-info">
+                        <p className="process-description">
+                            تستغرق الجلسة عادة من 30 إلى 45 دقيقة، وتتم تحت إشراف طبي متخصص
+                        </p>
+                        <a href="https://wa.me/201013739037" className="appointment-button">
+                            احجز موعدك الآن
+                        </a>
+                    </div>
             </div>
         </section>
     );

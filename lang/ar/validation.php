@@ -15,5 +15,6 @@ return [
     'min' => [
         'string' => 'يجب ألا يقل :attribute عن :min حرفاً.',
     ],
+    'mimetypes' => 'يجب أن يكون :attribute من نوع: :values.',
 ];
 

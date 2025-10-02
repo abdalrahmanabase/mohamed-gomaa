@@ -1,19 +1,124 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
-@source '../**/*.jsx';
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
 
-@theme {
-    --font-sans: 'Tajawal','Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+/* Color Variables */
+:root {
+    --primary-green: #2F855A;
+    --secondary-beige: #E5E7EB;
+    --accent-gold: #D97706;
+    --background-white: #FFFFFF;
+    --text-dark: #111827;
+    --text-gray: #6B7280;
+    --text-light: #9CA3AF;
+}
+
+/* :root {
+    --primary-green: #60A5FA;
+    --secondary-beige: #E0F2FE;
+    --accent-gold: #1E3A8A;
+    --background-white: #FFFFFF;
+    --text-dark: #374151;
+    --text-gray: #374151;
+    --text-light: #374151;
+} */
+
+/* :root {
+    --primary-green: #2f855a98;   
+    --secondary-beige: #d4e1ab; 
+    --accent-gold: #E2725B;     
+    --calm-blue: #60A5FA;       
+    --deep-blue: #1E3A8A;       
+    --accent-gold: #D97706;     
+    --background-white: #FFFFFF;
+    --text-dark: #111827;        
+    --text-gray: #374151;       
+    --text-light: #6B7280;       
+} */
+  
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-white);
+}
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.p-8 {
+    padding: 2rem;
 }
 
 
-body{
-    margin: 0;
-  font-family: 'Tajawal', sans-serif;
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+}
+.process-info {
+    text-align: center;
+}
+
+.process-description {
+    font-size: 1.125rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+}
+.appointment-button {
+    display: inline-block;
+    background: var(--primary-green);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-button:hover {
+    background: #1F4E3D;
 }

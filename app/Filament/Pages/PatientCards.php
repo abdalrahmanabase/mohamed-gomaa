@@ -45,6 +45,7 @@ class PatientCards extends Page implements HasForms
                     'physical therapy' => 'علاج طبيعي',
                     'plasma' => 'بلازما',
                     'hijama' => 'حجامة',
+                    'mesotherapy' => 'الميزوثيرابي',
                     'fsd' => 'علاج بالأعشاب',
                     'tag' => 'تجميل',
                     'fat' => 'سمنه و نحافه',

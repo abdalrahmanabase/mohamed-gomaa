@@ -1,0 +1,307 @@
+/* Mesotherapy page specific styles */
+.meso-header {
+    height: 60vh;
+    /* background: linear-gradient(to right, var(--primary-green), #1F4E3D); */
+    background-image: url('/images/images-5.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    position: relative;
+    z-index: 10;
+    max-width: 60rem;
+    height: 80%;
+    padding: 0 1rem;
+}
+
+.header-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.header-subtitle {
+    font-size: 1.25rem;
+    color: #e5e7eb;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .header-title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-title {
+        font-size: 3.75rem;
+    }
+}
+
+/* Mesotherapy Section Styles */
+.meso-section {
+    padding: 4rem 0;
+    background: var(--secondary-beige);
+}
+
+.meso-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.meso-card {
+    background: var(--background-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.meso-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.card-image {
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.card-image img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 0;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.card-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Benefits Section Styles */
+.benefits-section {
+    padding: 4rem 0;
+    background: var(--background-white);
+}
+
+.benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    color: var(--text-gray);
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background: var(--secondary-beige);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-2px);
+}
+
+.benefit-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.benefit-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Features Section Styles */
+.features-section {
+    padding: 4rem 0;
+    background: var(--secondary-beige);
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--background-white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.feature-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.meso-section {
+    scroll-margin-top: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .meso-header {
+        height: 65vh;
+    }
+    
+    .header-title {
+        font-size: 3rem;
+    }
+    
+    .header-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .meso-header {
+        height: 50vh;
+        padding: 2rem 1rem;
+    }
+    
+    .header-content {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .header-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .header-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .meso-header {
+        height: 60vh;
+        padding: 1rem;
+    background-image: url('/images/images-6.jpeg');
+
+    }
+    
+    .header-content {
+        padding: 0 0.5rem;
+    }
+    
+    .header-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .header-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.3;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
