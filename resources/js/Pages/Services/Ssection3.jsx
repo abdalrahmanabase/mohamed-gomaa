@@ -67,14 +67,7 @@ const Ssection3 = () => {
                         </p>
                     </motion.div>
                 </div>
-                <div className="process-info">
-                        <p className="process-description">
-                            تستغرق الجلسة عادة من 30 إلى 45 دقيقة، وتتم تحت إشراف طبي متخصص
-                        </p>
-                        <a href="https://wa.me/201013739037" className="appointment-button">
-                            احجز موعدك الآن
-                        </a>
-                    </div>
+               
             </div>
         </section>
     );

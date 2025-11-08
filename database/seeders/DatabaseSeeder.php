@@ -15,11 +15,18 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        // Use environment variable for password, with fallback only for local development
+        $adminPassword = env('ADMIN_PASSWORD', app()->environment('local') ? '11111111' : null);
+        
+        if (!$adminPassword) {
+            throw new \RuntimeException('ADMIN_PASSWORD environment variable must be set in production.');
+        }
+
         User::updateOrCreate(
-        ['email' => 'superadmin@gmail.com'],
+        ['email' => env('ADMIN_EMAIL', 'superadmin@gmail.com')],
         [
-            'name' => 'Abdalrahman Abase',
-            'password' => bcrypt('11111111'),
+            'name' => env('ADMIN_NAME', 'Abdalrahman Abase'),
+            'password' => bcrypt($adminPassword),
         ]
         );
 

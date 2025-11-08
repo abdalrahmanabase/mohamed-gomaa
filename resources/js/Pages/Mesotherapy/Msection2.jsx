@@ -24,22 +24,21 @@ const Msection2 = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="benefit-card"
                     >
-                        <h3 className="benefit-title">تحسين مظهر البشرة</h3>
+                        <h3 className="benefit-title">تفتيت الدهون الموضعيه</h3>
                         <p className="benefit-description">
-                            تقليل التجاعيد وتحسين نسيج البشرة وإعطائها مظهراً أكثر شباباً
-                        </p>
+                        تفتيت الدهون الموضعية في أماكن زي البطن، الأرداف، الذراعين، والذقن المزدوج.                        </p>
                     </motion.div>
-
+                  
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="benefit-card"
                     >
-                        <h3 className="benefit-title">علاج تساقط الشعر</h3>
+                        <h3 className="benefit-title">علاج تجميلي</h3>
                         <p className="benefit-description">
-                            تحفيز نمو الشعر وتقوية بصيلات الشعر ومنع تساقطه
-                        </p>
+                        تحسين شكل الجسم ونحته من غير جراحة و شد الجلد بعد تقليل الدهون في المنطقة.
+                    </p>
                     </motion.div>
 
                     <motion.div

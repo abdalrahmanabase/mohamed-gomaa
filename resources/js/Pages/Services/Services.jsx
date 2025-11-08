@@ -11,7 +11,7 @@ const Services = ({ infoCards }) => {
             <Sheader />
             <Ssection1 infoCards={infoCards} />
             <Ssection2 />
-            <Ssection3 />
+            {/* <Ssection3 /> */}
         </>
     );
 };

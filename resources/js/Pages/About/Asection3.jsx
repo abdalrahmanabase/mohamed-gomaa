@@ -30,17 +30,7 @@ const Asection3 = () => {
                         </p>
                     </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
-                        className="value-card"
-                    >
-                        <h3 className="value-title">التعاطف</h3>
-                        <p className="value-description">
-                            نتعامل مع كل مريض بلطف وتعاطف وفهم
-                        </p>
-                    </motion.div>
+                   
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

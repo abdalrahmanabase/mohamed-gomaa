@@ -3,7 +3,7 @@
     height: 60vh;
     /* background: linear-gradient(to right, var(--primary-green), #1F4E3D); */
     position: relative;
-    background-image: url('/images/images-2.jpeg');
+    background-image: url('/images/beess.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .header-content {
@@ -39,7 +39,7 @@
 }
 
 .header-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: #e5e7eb;
     margin-bottom: 2rem;
 }
@@ -270,10 +270,11 @@
     .bee-header {
         height: 60vh;
         padding: 1rem;
-    background-image: url('/images/images-3.jpeg');
-
+        background-image: url('/images/1200x1200bf-60.jpg');
     }
-    
+    /* .header-overlay {
+        background: rgba(0, 0, 0, 0.5);
+    } */
     .header-content {
         padding: 0 0.5rem;
     }
@@ -284,7 +285,7 @@
     }
     
     .header-subtitle {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         margin-bottom: 1.2rem;
         line-height: 1.3;
     }

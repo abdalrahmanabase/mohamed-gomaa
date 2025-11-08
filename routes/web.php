@@ -87,6 +87,25 @@ Route::get('/Plasma', function () {
     ]);
 })->name('Plasma');
 
+Route::get('/derma', function () {
+    $infoCards = InfoCard::where('location', 'Derma')
+        ->orderBy('order')
+        ->get(['id', 'title', 'description', 'image_path', 'order'])
+        ->map(fn($card) => [
+            'id'          => $card->id,
+            'title'       => $card->title,
+            'description' => $card->description,
+            'image_path'  => $card->image_path
+                ? Storage::url($card->image_path)
+                : null,
+            'order'       => $card->order,
+        ]);
+
+    return Inertia::render('Derma/Derma', [
+        'infoCards' => $infoCards
+    ]);
+})->name('derma');
+
 Route::get('/Cupping', function () {
     $infoCards = InfoCard::where('location', 'Cupping')
         ->orderBy('order')

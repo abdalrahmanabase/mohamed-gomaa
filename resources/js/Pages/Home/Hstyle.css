@@ -3,7 +3,7 @@
     height: 80vh;
     background-image: 
         linear-gradient(to bottom right, transparent 50%, rgba(0, 0, 0, 0.3)),
-        url('/images/cupping_2400x1000px-1920w.webp');
+        url('/images/hijama.webp');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -20,7 +20,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .header-content {
@@ -79,6 +79,7 @@
 }
 
 .about-content p {
+    font-size:larger;
     margin-bottom: 1rem;
     line-height: 1.6;
     color: var(--text-gray);
@@ -243,6 +244,26 @@
     .header-subtitle {
         font-size: 1.3rem;
     }
+
+    .about-container-home {
+        gap: 3rem;
+    }
+
+    .about-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .stats-grid {
+        gap: 1.5rem;
+    }
+
+    .stat-item {
+        padding: 1.5rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2.2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -266,13 +287,41 @@
         font-size: 1.1rem;
     }
 
-    .about-container {
+    .about-section {
+        padding: 3rem 0;
+    }
+
+    .about-container-home {
         grid-template-columns: 1fr;
         gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .about-content p {
+        text-align: center;
+        font-size: 0.95rem;
     }
 
     .stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-item {
+        padding: 1.2rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+
+    .stat-item p {
+        font-size: 0.9rem;
     }
 
     .cards-grid,
@@ -286,7 +335,7 @@
         height: 60vh;
         padding: 1rem;
         background-image: 
-            url('/images/cupping_2400x1000px-1920w.webp');
+            url('/images/hijama-mobile2.webp');
         background-size: cover;
         background-position: center;
         position: relative;
@@ -295,6 +344,10 @@
         justify-content: center;
         text-align: center;
         color: white;
+    }
+
+    .header-overlay {
+        background: rgba(0, 0, 0, 0.5);
     }
     
     .header-content {
@@ -318,12 +371,100 @@
         font-size: 1rem;
     }
 
-    .section-header h2 {
-        font-size: 2rem;
+    .about-section {
+        padding: 2rem 0;
+    }
+
+    .about-container-home {
+        padding: 0 0.5rem;
+        gap: 1.5rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .stat-item {
+        padding: 1rem;
     }
 
     .stat-item h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .stat-item p {
+        font-size: 0.85rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    .about-container-home {
+        padding: 0 0.25rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-content p {
+        font-size: 0.85rem;
+    }
+
+    .stat-item {
+        padding: 0.8rem;
+    }
+
+    .stat-item h3 {
+        font-size: 1.6rem;
+    }
+
+    .stat-item p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .about-section {
+        padding: 1.5rem 0;
+    }
+
+    .about-container-home {
+        gap: 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+    }
+
+    .stat-item {
+        padding: 0.8rem 0.5rem;
+    }
+
+    .stat-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .stat-item p {
+        font-size: 0.75rem;
     }
 }
 

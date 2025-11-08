@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('diagnosis')->nullable();
             $table->dateTime('next_session_at')->nullable();
             $table->text('description')->nullable();
-            $table->enum('type', ['bee venom','physical therapy','plasma', 'hijama','fsd','tag','fat','other'])->default('hijama');
+            $table->enum('type', ['bee venom','physical therapy','plasma', 'hijama','mesotherapy','fsd','tag','fat','other'])->default('hijama');
             $table->enum('session_status', ['upcoming', 'done'])->default('upcoming');
             $table->timestamps();
         });

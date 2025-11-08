@@ -69,9 +69,7 @@ const Navbar = () => {
                     <li>
                         <Link href="/Cupping" className="nav-link">الحجامة</Link>
                     </li>
-                    <li>
-                        <Link href="/services" className="nav-link">فوطه ناريه</Link>
-                    </li>
+                    
                     <li>
                         <Link href="/Bee_poison" className="nav-link">سم النحل</Link>
                     </li>
@@ -86,6 +84,12 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link href="/Plasma" className="nav-link">البلازما</Link>
+                    </li>
+                    <li>
+                        <Link href="/derma" className="nav-link">الديرما بن</Link>
+                    </li>
+                    <li>
+                        <Link href="/services" className="nav-link">فوطه ناريه</Link>
                     </li>
                     <li>
                         <a

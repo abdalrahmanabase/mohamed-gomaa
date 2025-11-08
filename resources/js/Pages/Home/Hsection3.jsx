@@ -113,7 +113,7 @@ const Hsection3 = () => {
                             />
                             <div className="author-info">
                                 <h4>{review.name}</h4>
-                                <p>{review.position || 'عميل'}</p>
+                                <p>{review.position || 'مريض'}</p>
                                 <div className="rating">
                                     {Array.from({ length: review.rating }, (_, i) => (
                                         <span key={i} className="text-yellow-400">⭐</span>

@@ -15,7 +15,11 @@ const Footer = () => {
                             <div className="contact-item">
                                 <a href="tel:+201013739037" className="contact-link">
                                     <i className="fas fa-phone"></i>
-                                    <span>+20 101 373 9037</span>
+                                    <span>01013739037</span>
+                                </a>
+                                <a href="tel:+201013739037" className="contact-link">
+                                    <i className="fas fa-phone"></i>
+                                    <span>01114420094</span>
                                 </a>
                             </div>
                             {/* <div className="contact-item">
@@ -61,6 +65,9 @@ const Footer = () => {
                                 <Link href="/Plasma" className="nav-link">البلازما</Link>
                             </li>
                             <li>
+                                <Link href="/derma" className="nav-link">الديرما بن</Link>
+                            </li>
+                            <li>
                                 <a
                                     href="https://wa.me/201013739037"
                                     className="nav-link"
@@ -79,7 +86,7 @@ const Footer = () => {
                         <ul className="working-hours">
                             <li>
                                 <span>السبت - الخميس:</span>
-                                <span>12:00 صباحاً - 10:00 مساءً</span>
+                                <span>12:00 صباحاً - 12:00 مساءً</span>
                             </li>
                             <li>
                                 <span>الجمعة:</span>
@@ -94,15 +101,15 @@ const Footer = () => {
 
                 {/* Social Media Links */}
                 <div className="social-links">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
+                    <a href="https://www.facebook.com/share/19FYnSEW46" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                         <i className="fab fa-facebook"></i>
                     </a>
                     {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Twitter">
                         <i className="fab fa-twitter"></i>
                     </a> */}
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
+                    {/* <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
                         <i className="fab fa-instagram"></i>
-                    </a>
+                    </a> */}
                     <a href="https://wa.me/201013739037" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
                         <i className="fab fa-whatsapp"></i>
                     </a>

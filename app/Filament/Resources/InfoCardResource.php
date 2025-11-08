@@ -33,6 +33,7 @@ class InfoCardResource extends Resource
                     'home' => 'الصفحة الرئيسية',
                     'about' => 'من نحن',
                     'Plasma' => 'بلازما',
+                    'Derma' => 'الديرما بن ',
                     'Physical_therapy' => 'العلاج الطبيعي',
                     'Cupping' => 'حجامة',
                     'services' => 'فوطه ناريه',
@@ -70,6 +71,7 @@ class InfoCardResource extends Resource
                             'home' => 'الصفحة الرئيسية',
                             'about' => 'من نحن',
                             'Plasma' => 'بلازما',
+                            'Derma' => 'الديرما بن',
                             'Physical_therapy' => 'العلاج الطبيعي',
                             'Cupping' => 'حجامة',
                             'services' => 'فوطه ناريه',
@@ -87,6 +89,7 @@ class InfoCardResource extends Resource
                         'home' => 'الصفحة الرئيسية',
                         'about' => 'من نحن',
                         'Plasma' => 'بلازما',
+                        'Derma' => 'الديرما بن',
                         'Physical_therapy' => 'العلاج الطبيعي',
                         'Cupping' => 'حجامة',
                         'services' => 'فوطه ناريه',
@@ -99,6 +102,7 @@ class InfoCardResource extends Resource
                             'home' => 'الصفحة الرئيسية',
                             'about' => 'من نحن',
                             'Plasma' => 'بلازما',
+                            'Derma' => 'الديرما بن',
                             'Physical_therapy' => 'العلاج الطبيعي',
                             'Cupping' => 'حجامة',
                             'services' => 'فوطه ناريه',
@@ -122,6 +126,7 @@ class InfoCardResource extends Resource
                             'home' => 'الصفحة الرئيسية',
                             'about' => 'من نحن',
                             'Plasma' => 'بلازما',
+                            'Derma' => 'الديرما بن ',
                             'Physical_therapy' => 'العلاج الطبيعي',
                             'Cupping' => 'حجامة',
                             'services' => 'فوطه ناريه',
@@ -151,12 +156,13 @@ class InfoCardResource extends Resource
                     WHEN location = 'home' THEN 1
                     WHEN location = 'about' THEN 2
                     WHEN location = 'Plasma' THEN 3
-                    WHEN location = 'Physical_therapy' THEN 4
-                    WHEN location = 'Cupping' THEN 5
-                    WHEN location = 'services' THEN 6
-                    WHEN location = 'Bee_poison' THEN 7
-                    WHEN location = 'Mesotherapy' THEN 8
-                    WHEN location = 'HerbsOils' THEN 9
+                    WHEN location = 'Derma' THEN 4
+                    WHEN location = 'Physical_therapy' THEN 5
+                    WHEN location = 'Cupping' THEN 6
+                    WHEN location = 'services' THEN 7
+                    WHEN location = 'Bee_poison' THEN 8
+                    WHEN location = 'Mesotherapy' THEN 9
+                    WHEN location = 'HerbsOils' THEN 10
                     ELSE 99
                 END
             ")

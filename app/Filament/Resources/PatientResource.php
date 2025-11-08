@@ -47,7 +47,9 @@ class PatientResource extends Resource
                         ->required(),
                     DateTimePicker::make('next_session_at')
                         ->label('الجلسة القادمة')
-                        ->displayFormat('d/m/Y g:i A')
+                        ->displayFormat('d/m/Y h:i A')
+                        ->format('d/m/Y h:i A')
+                        ->seconds(false)
                         ->native(false)
                         // When creating/editing a record, if the date is changed,
                         // we should reset the status to 'upcoming'.
@@ -98,10 +100,10 @@ class PatientResource extends Resource
                     }),
                 Tables\Columns\TextColumn::make('next_session_at')
                     ->label('الجلسة القادمة')
-                    ->dateTime('d/m/Y g:i A')
+                    ->dateTime('d/m/Y h:i A')
                     ->sortable(),
             ])
-            ->defaultSort('next_session_at', 'asc')
+            ->defaultSort('next_session_at', 'desc')
             ->filters([
                 Tables\Filters\SelectFilter::make('session_status')
                     ->label('حالة الجلسة')

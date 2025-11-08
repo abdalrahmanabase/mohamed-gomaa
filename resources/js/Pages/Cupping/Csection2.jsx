@@ -13,7 +13,7 @@ const Csection2 = () => {
                 >
                     <h2 className="section-title">فوائد الحجامة</h2>
                     <p className="section-description">
-                        علاج طبيعي فعال يساعد في تحسين الصحة العامة وتخفيف العديد من الأمراض
+                        علاج  فعال يساعد في تحسين الصحة العامة وتخفيف العديد من الأمراض
                     </p>
                 </motion.div>
 

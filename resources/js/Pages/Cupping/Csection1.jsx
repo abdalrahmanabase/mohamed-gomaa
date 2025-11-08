@@ -34,7 +34,7 @@ const Csection1 = ({ infoCards = [] }) => {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-الحجامة هي ممارسة علاجية قديمة تقوم على وضع كؤوس خاصة على الجلد لعمل شفط يساعد على
+الحجامة هي ممارسة علاجية قديمة تقوم على وضع كؤوس خاصة على الجلد لعمل شفط الاخلاط التالفه
 </motion.p>
                 <div className="cards-grid">
                     {infoCards.map((card, index) => (
