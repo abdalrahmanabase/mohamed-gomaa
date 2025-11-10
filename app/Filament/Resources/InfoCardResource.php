@@ -44,12 +44,14 @@ class InfoCardResource extends Resource
                 ->required(),
             FileUpload::make('image_path')
                 ->label('الصورة')
-                ->acceptedFileTypes(['image/*'])
+                ->disk('public')
                 ->directory('info-cards')
+                ->acceptedFileTypes(['image/*'])
                 ->preserveFilenames()
                 ->downloadable()
                 ->openable()
                 ->previewable()
+                ->visibility('public')
                 ->rules([
                     'mimetypes:image/jpeg,image/png,image/gif,image/webp,image/svg+xml,image/bmp,image/tiff,image/x-icon'
                 ]),

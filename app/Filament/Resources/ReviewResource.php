@@ -61,9 +61,10 @@ class ReviewResource extends Resource
                         
                         Forms\Components\FileUpload::make('image_path')
                             ->label('صورة العميل')
+                            ->disk('public')
+                            ->directory('reviews')
                             ->image()
                             ->imageEditor()
-                            ->directory('reviews')
                             ->visibility('public'),
                         
                         Forms\Components\TextInput::make('order')
