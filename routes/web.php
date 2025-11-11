@@ -223,3 +223,46 @@ Route::get('/api/reviews', function () {
 
 Route::get('/cards/{location?}', [InfoCardController::class, 'index'])
     ->name('cards.index');
+
+// Sitemap route for frontend React pages (fallback if static file doesn't exist)
+Route::get('/sitemap.xml', function () {
+    $baseUrl = config('app.url');
+    if (empty($baseUrl)) {
+        $baseUrl = request()->getSchemeAndHttpHost();
+    }
+    
+    // Remove trailing slash if present
+    $baseUrl = rtrim($baseUrl, '/');
+    
+    // Define all frontend routes with their priorities and change frequencies
+    $routes = [
+        ['url' => '/', 'priority' => '1.0', 'changefreq' => 'daily'],
+        ['url' => '/about', 'priority' => '0.9', 'changefreq' => 'weekly'],
+        ['url' => '/services', 'priority' => '0.9', 'changefreq' => 'weekly'],
+        ['url' => '/Cupping', 'priority' => '0.8', 'changefreq' => 'monthly'],
+        ['url' => '/Bee_poison', 'priority' => '0.8', 'changefreq' => 'monthly'],
+        ['url' => '/mesotherapy', 'priority' => '0.8', 'changefreq' => 'monthly'],
+        ['url' => '/herbs-oils', 'priority' => '0.8', 'changefreq' => 'monthly'],
+        ['url' => '/Physical_therapy', 'priority' => '0.8', 'changefreq' => 'monthly'],
+        ['url' => '/Plasma', 'priority' => '0.8', 'changefreq' => 'monthly'],
+        ['url' => '/derma', 'priority' => '0.8', 'changefreq' => 'monthly'],
+    ];
+    
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    
+    foreach ($routes as $route) {
+        $xml .= "  <url>\n";
+        $xml .= "    <loc>" . htmlspecialchars($baseUrl . $route['url']) . "</loc>\n";
+        $xml .= "    <lastmod>" . date('Y-m-d') . "</lastmod>\n";
+        $xml .= "    <changefreq>" . $route['changefreq'] . "</changefreq>\n";
+        $xml .= "    <priority>" . $route['priority'] . "</priority>\n";
+        $xml .= "  </url>\n";
+    }
+    
+    $xml .= '</urlset>';
+    
+    return response($xml, 200)
+        ->header('Content-Type', 'application/xml; charset=utf-8')
+        ->header('Cache-Control', 'public, max-age=3600');
+})->name('sitemap');
