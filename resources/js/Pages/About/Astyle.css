@@ -1,6 +1,8 @@
-/* About page specific styles */
+/* About page specific styles - Unique class names to prevent conflicts */
 .about-header {
     height: 65vh;
+    min-height: 65vh;
+    max-height: 65vh;
     background: linear-gradient(to right, var(--primary-green), #1F4E3D);
     position: relative;
     display: flex;
@@ -8,45 +10,55 @@
     justify-content: center;
     text-align: center;
     color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.header-overlay {
+.about-header-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
 }
 
-.header-content {
+.about-header-content {
     position: relative;
     z-index: 10;
     max-width: 56rem;
     padding: 0 1rem;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.header-title {
+.about-header-title {
     font-size: 2.25rem;
     font-weight: bold;
     color: white;
-    margin-bottom: 1.5rem;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
 }
 
-.header-subtitle {
+.about-header-subtitle {
     font-size: 1.5rem;
     color: #e5e7eb;
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
+    padding: 0;
 }
 
 @media (min-width: 768px) {
-    .header-title {
+    .about-header-title {
         font-size: 3rem;
     }
 }
 
 @media (min-width: 1024px) {
-    .header-title {
+    .about-header-title {
         font-size: 3.75rem;
     }
 }
@@ -218,13 +230,15 @@
 @media (max-width: 1024px) {
     .about-header {
         height: 65vh;
+        min-height: 65vh;
+        max-height: 65vh;
     }
     
-    .header-title {
+    .about-header-title {
         font-size: 3rem;
     }
     
-    .header-subtitle {
+    .about-header-subtitle {
         font-size: 1.3rem;
     }
 }
@@ -232,20 +246,22 @@
 @media (max-width: 768px) {
     .about-header {
         height: 50vh;
-        padding: 2rem 1rem;
+        min-height: 50vh;
+        max-height: 50vh;
+        padding: 0;
     }
     
-    .header-content {
+    .about-header-content {
         max-width: 100%;
-        padding: 0 1rem;
+        padding: 1rem;
     }
     
-    .header-title {
+    .about-header-title {
         font-size: 2rem;
         margin-bottom: 1rem;
     }
     
-    .header-subtitle {
+    .about-header-subtitle {
         font-size: 1rem;
         margin-bottom: 1.5rem;
         line-height: 1.4;
@@ -255,19 +271,21 @@
 @media (max-width: 480px) {
     .about-header {
         height: 75vh;
-        padding: 0rem;
+        min-height: 75vh;
+        max-height: 75vh;
+        padding: 0;
     }
     
-    .header-content {
-        padding: 0 0.5rem;
+    .about-header-content {
+        padding: 0.5rem;
     }
     
-    .header-title {
+    .about-header-title {
         font-size: 1.75rem;
         margin-bottom: 0.8rem;
     }
     
-    .header-subtitle {
+    .about-header-subtitle {
         font-size: 1.2rem;
         margin-bottom: 1.2rem;
         line-height: 1.3;

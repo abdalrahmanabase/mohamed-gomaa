@@ -9,13 +9,13 @@ const Aheader = () => {
             transition={{ duration: 0.5 }}
             className="about-header"
         >
-            <div className="header-overlay"></div>
-            <div className="header-content">
+            <div className="about-header-overlay"></div>
+            <div className="about-header-content">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="header-title"
+                    className="about-header-title"
                 >
                     من نحن
                 </motion.h1>
@@ -23,7 +23,7 @@ const Aheader = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="header-subtitle">
+                    className="about-header-subtitle">
 
 
 نحن مركز متخصص في الطب البديل والعلاج الطبيعي، بنقدّم لك تجربة علاج متكاملة تعتمد على الطرق الطبيعية الآمنة اللي بتعيد للجسم توازنه وتساعده على الشفاء الذاتي.
